@@ -1,0 +1,72 @@
+@import '../../styles/styles';
+
+.resultCard{
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: none;
+  outline: none;
+  border: none;
+  padding: 0.5rem;
+  position: relative;
+  cursor: pointer;
+
+  &:not(:last-child){
+    &:after {
+      content : "";
+      position: absolute;
+      left: 3%;
+      bottom: 0;
+      width: 95%;
+      border-bottom: 1px solid rgb(230, 238, 238);
+    }
+  }
+
+  &__container{
+    display: flex;
+    width: auto;
+
+    &__photo{
+      border-radius: 4px;
+      height: 60px;
+      min-width: 60px;
+    }
+
+    &__details{
+      text-align: left;
+      margin-left: 8px;
+
+      &__price{
+        font-weight: 600;
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px){
+  .resultCard{
+    &__container{
+      &__photo{
+        height: 200px;
+        width: 200px;
+      }
+      &__details{
+        margin-top: 16px;
+        &__price{
+          font-size: 1.6rem;
+        }
+        &__description, span{
+          margin-top: 10px;
+          font-size: 1.1rem;
+        }
+      }
+    }
+    &__location{
+      margin-right: 3rem;
+      font-size: 16px;
+    }
+  }
+}

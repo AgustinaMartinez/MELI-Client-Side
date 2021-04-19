@@ -1,0 +1,10 @@
+@import '../styles/styles';
+
+.layout{
+  min-height: 100vh;
+  background-color: $lightGrey;
+
+  &__children{
+    padding: 1rem;
+  }
+}
